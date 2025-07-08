@@ -1,38 +1,206 @@
+/* Global resets and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9fafd;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+}
+
+/* centering about-image class  */
+.placeholder-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* centering text in services */
+.services p {
+  text-align: center;
+  color: #555;
+}
+
+
+/* Header */
+.header {
+  background-color: #0077b6;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header nav {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+}
+.header button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.header button:hover {
+  color: #caf0f8;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hero Section */
+.hero {
+  background-color: #caf0f8;
+  padding: 4rem 1rem;
+  text-align: center;
+  flex: 1;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #023e8a;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #03045e;
+}
+.hero .btn {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.hero .btn:hover {
+  background-color: #005f87;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* App.css — append at bottom */
+
+section.about {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+section.about h2 {
+  margin: 3rem 0 1rem;   /* same spacing as other sections */
+  color: #023e8a;
+}
+
+section.about p {
+  margin-bottom: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+
+/* Section Titles */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem; /* Added top margin to separate from previous section */
+  color: #023e8a;
+}
+
+/* Services and Ambulance Sections */
+section.services,
+section.ambulances {
+  text-align: left;
+}
+
+.services ul,
+.ambulances ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.services li,
+.ambulances li {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+.services li h3,
+.ambulances li h3 {
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+.services li p,
+.ambulances li p {
+  color: #555;
+}
+
+/* Contact Section */
+section.contact {
+  text-align: center;
+}
+.contact h3 {
+  margin-top: 1rem;
+  color: #0077b6;
+}
+.contact p {
+  margin-bottom: 0.5rem;
+}
+.contact form {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0.5rem auto;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+.contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact button[type="submit"] {
+  width: max-content;
+  background-color: #0077b6;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 0 auto;
+}
+.contact button[type="submit"]:hover {
+  background-color: #005f87;
+}
+
+/* Footer */
+.footer {
+  background-color: #03045e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+.footer p {
+  font-size: 0.9rem;
 }
