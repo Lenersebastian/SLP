@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SLP/static/css/main.5170c5bb.css",
+    "main.js": "/SLP/static/js/main.0373594a.js",
+    "static/js/453.368dbcd1.chunk.js": "/SLP/static/js/453.368dbcd1.chunk.js",
+    "index.html": "/SLP/index.html",
+    "main.5170c5bb.css.map": "/SLP/static/css/main.5170c5bb.css.map",
+    "main.0373594a.js.map": "/SLP/static/js/main.0373594a.js.map",
+    "453.368dbcd1.chunk.js.map": "/SLP/static/js/453.368dbcd1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5170c5bb.css",
+    "static/js/main.0373594a.js"
+  ]
+}
